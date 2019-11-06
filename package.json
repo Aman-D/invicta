@@ -4,11 +4,12 @@
   "description": "techno cultural fest",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^1.19.4"
   }
