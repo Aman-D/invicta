@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/Artboard1.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: 'Noto Sans KR', sans-serif;
+
+    .foreground{
+        position: absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        background-image: url('../images/foreground2.png');
+        background-size:cover;
+        background-repeat: no-repeat;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .emblem{
+        width:450.01px;
+        height:503.99px;
+        position: absolute;
+        top:30%;
+        left:52%;
+        transform:translate(-50%,-50%) ;
+        svg{
+            height:inherit;
+            width:inherit;
+        }
+    }
+
+    #demo{
+        position: absolute;
+        top:65%;
+        left:50%;
+        transform:translate(-50%,-50%) ;
+        color: #D3B178;
+        font-size: 62px;
+        display: flex;
+        flex-direction: row;
+
+        .bar{
+            display: flex;
+            flex-direction: row;
+            margin:10px;
+            justify-content: center;
+            align-items:center;
+            .label{
+                font-size: 42px;
+            }
+        }
+    }
+
+    .social_links{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom:10%;
+        left:50%;
+        transform:translate(-50%,-50%) ;
+        .social_box{
+            background-color: #D3B178;
+            border-radius: 50%;
+            width:36px;
+            height:36px;
+            margin: 10px 26px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.562);
+            a{
+                text-decoration: none;
+                i{
+                    position: absolute;
+                    font-size: 18px;
+                    top:55%;
+                    left:50%;
+                    transform:translate(-50%,-50%) ;
+                    color: black;
+                }
+            }
+            &:hover{
+                background-color: blanchedalmond;
+            }
+        }
+        
+    }
+}
