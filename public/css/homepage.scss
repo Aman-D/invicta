@@ -4,16 +4,18 @@
 }
 body{
     overflow: hidden;
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
 }
-.container{
+#container{
     position: relative;
     height: 100vh;
     width: 100vw;
     background-image: url('../images/Artboard1.png');
     background-size:cover;
     background-repeat: no-repeat;
-    font-family: 'Noto Sans KR', sans-serif;
-
+    transition: all 0.85s ease-in-out;
+    // filter: blur(8px);
     .foreground{
         position: absolute;
         top:0;
@@ -65,7 +67,7 @@ body{
         display: flex;
         flex-direction: row;
         position: absolute;
-        bottom:10%;
+        bottom:1%;
         left:50%;
         transform:translate(-50%,-50%) ;
         .social_box{
@@ -94,5 +96,62 @@ body{
             }
         }
         
+    }
+}
+
+// #contact{
+//     position: absolute;
+//     bottom:5%;
+//     left:50%;
+//     transform: translate(-50%,-50%);
+//     color: #D3B178;
+//     cursor: pointer;
+//     i{
+//         padding:0 10px;
+//     }
+//     &:hover{
+//         color:white;
+//     }
+// }
+
+#contact_card{
+    position: absolute;
+    bottom:12%;
+    left:55%;
+    transform: translate(-50%,-50%);
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    form{
+        display: flex;
+        width: 100%;
+        padding:10px;
+      
+
+        input,button{
+            height:35px; 
+            outline:none;
+            border:none;
+            background:transparent;
+            margin-right:5px;
+        }
+        input[type = text]{
+            width:60%;
+            border-bottom: 1px solid gray;
+            color: white;
+            font-family: 'Muli', sans-serif;
+            font-size: 18px;
+        } 
+        ::placeholder{
+            color:white;
+        } 
+        button{
+            background-color: #D3B178;
+            padding: 0 13px;
+            font-size: 18px;
+            color:white;
+            cursor: pointer;
+        } 
     }
 }
