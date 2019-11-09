@@ -6,6 +6,7 @@ body{
     overflow: hidden;
     position: relative;
     font-family: 'Noto Sans KR', sans-serif;
+    height: 100vh;
 }
 #container{
     position: relative;
@@ -16,6 +17,9 @@ body{
     background-repeat: no-repeat;
     // transition: all 0.85s ease-in-out;
     // filter: blur(8px);
+    display: grid;
+    grid-template-rows: 50% 20% 15% 15%;
+    place-items:center;
     .foreground{
         position: absolute;
         top:0;
@@ -26,15 +30,17 @@ body{
         background-size:cover;
         background-repeat: no-repeat;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        pointer-events: none;;
     }
 
     .emblem{
         width:450.01px;
         height:503.99px;
-        position: absolute;
-        top:30%;
-        left:52%;
-        transform:translate(-50%,-50%) ;
+        // // position: absolute;
+        // // top:30%;
+        // // left:52%;
+        // transform:translate(-50%,-50%) ;
+        grid-row: 1 / 2;
         svg{
             height:inherit;
             width:inherit;
@@ -42,15 +48,16 @@ body{
     }
 
     #demo{
-        position: absolute;
-        top:65%;
-        left:50%;
-        transform:translate(-50%,-50%) ;
+        // position: absolute;
+        // top:65%;
+        // left:50%;
+        // transform:translate(-50%,-50%) ;
+        grid-row: 2 / 3;
         color: #D3B178;
         font-size: 62px;
         display: flex;
         flex-direction: row;
-
+        text-shadow: 2px 0 10px rgba(0, 0, 0, 0.623);
         .bar{
             display: flex;
             flex-direction: row;
@@ -62,14 +69,57 @@ body{
             }
         }
     }
+    
+    #contact_card{
+    // position: absolute;
+    // bottom:12%;
+    // left:55%;
+    // transform: translate(-50%,-50%);
+    grid-row:3 / 4;
+    
+    
+    form{
+        display: flex;
+        padding:10px;
+      
+        input,button{
+            height:35px; 
+           
+            outline:none;
+            border:none;
+            background:transparent;
+            margin-right:5px;
+        }
+        input[type = text]{
+            width:350px;
+            border-bottom: 1px solid gray;
+            color: white;
+            font-family: 'Muli', sans-serif;
+            font-size: 18px;
+        } 
+        ::placeholder{
+            color:white;
+        } 
+        button{
+            width:auto;
+            background-color: #D3B178;
+            padding: 0 13px;
+            font-size: 18px;
+            color:white;
+            cursor: pointer;
+        } 
+    }
+    
+    }
 
     .social_links{
         display: flex;
         flex-direction: row;
-        position: absolute;
-        bottom:1%;
-        left:50%;
-        transform:translate(-50%,-50%) ;
+        grid-row: 4 / 5;
+        // position: absolute;
+        // bottom:1%;
+        // left:50%;
+        // transform:translate(-50%,-50%) ;
 
         .social_box{
             background-color: #D3B178;
@@ -100,63 +150,6 @@ body{
     }
 }
 
-// #contact{
-//     position: absolute;
-//     bottom:5%;
-//     left:50%;
-//     transform: translate(-50%,-50%);
-//     color: #D3B178;
-//     cursor: pointer;
-//     i{
-//         padding:0 10px;
-//     }
-//     &:hover{
-//         color:white;
-//     }
-// }
-
-#contact_card{
-    position: absolute;
-    bottom:12%;
-    left:55%;
-    transform: translate(-50%,-50%);
-    width:50%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    form{
-        display: flex;
-        width: 100%;
-        padding:10px;
-      
-
-        input,button{
-            height:35px; 
-            outline:none;
-            border:none;
-            background:transparent;
-            margin-right:5px;
-        }
-        input[type = text]{
-            width:60%;
-            border-bottom: 1px solid gray;
-            color: white;
-            font-family: 'Muli', sans-serif;
-            font-size: 18px;
-        } 
-        ::placeholder{
-            color:white;
-        } 
-        button{
-            background-color: #D3B178;
-            padding: 0 13px;
-            font-size: 18px;
-            color:white;
-            cursor: pointer;
-        } 
-    }
-}
-
 
 
 
@@ -171,26 +164,31 @@ body{
         .emblem{
          width:350.01px;
          height:403.99px;
-         position: absolute;
-         top:30%;
-         left:56%;
-         transform:translate(-50%,-50%) ;
          svg{
              height:inherit;
              width:inherit;
          }
      }
  
- 
      #demo{
-         font-size: 32px;
+         font-size: 52px;
  
          .bar{
              .label{
-                 font-size: 12px;
+                 font-size: 22px;
              }
          }
      }
+
+     #contact_card{
+    
+        form{
+            input[type = text]{
+                width:250px;
+            } 
+        }
+        
+        }
     }
 }
 //for mobile
@@ -202,12 +200,10 @@ body{
  
  
         .emblem{
+            transform:translateX(20px);
+            place-self: center;
          width:350.01px;
          height:403.99px;
-         position: absolute;
-         top:30%;
-         left:56%;
-         transform:translate(-50%,-50%) ;
          svg{
              height:inherit;
              width:inherit;
@@ -224,36 +220,20 @@ body{
              }
          }
      }
+
+     #contact_card{
+       
+        form{
+            display: flex;
+            flex-direction: column;
+            input[type = text]{
+                text-align: center;
+                width:350px;
+                margin-bottom:10px;
+            } 
+        }
     }
-    #contact_card{
-     width:100%;
-    bottom:10%;
-     left:50%;
-     form{
-         display: flex;
-         flex-direction: column;
-         width: 80%;
-         padding:10px;
-         justify-content:center;
-         align-items:center;
- 
-         input[type = text]{
-             text-align: center;
-             width:80%;
-             margin-bottom:10px;
-         } 
-         ::placeholder{
-             color:white;
-         } 
-         button{
-             background-color: #D3B178;
-             padding: 0 13px;
-             font-size: 18px;
-             color:white;
-             cursor: pointer;
-             width:50%;
-         } 
-     }
- }
- 
+
+    }
+  
  }

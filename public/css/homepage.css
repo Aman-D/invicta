@@ -7,6 +7,7 @@ body {
   overflow: hidden;
   position: relative;
   font-family: 'Noto Sans KR', sans-serif;
+  height: 100vh;
 }
 
 #container {
@@ -16,6 +17,11 @@ body {
   background-image: url("../images/Artboard1.png");
   background-size: cover;
   background-repeat: no-repeat;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 20% 15% 15%;
+      grid-template-rows: 50% 20% 15% 15%;
+  place-items: center;
 }
 
 #container .foreground {
@@ -29,16 +35,15 @@ body {
   background-repeat: no-repeat;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  pointer-events: none;
 }
 
 #container .emblem {
   width: 450.01px;
   height: 503.99px;
-  position: absolute;
-  top: 30%;
-  left: 52%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
 }
 
 #container .emblem svg {
@@ -47,11 +52,9 @@ body {
 }
 
 #container #demo {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
   color: #D3B178;
   font-size: 62px;
   display: -webkit-box;
@@ -61,6 +64,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  text-shadow: 2px 0 10px rgba(0, 0, 0, 0.623);
 }
 
 #container #demo .bar {
@@ -84,6 +88,60 @@ body {
   font-size: 42px;
 }
 
+#container #contact_card {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#container #contact_card form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+#container #contact_card form input, #container #contact_card form button {
+  height: 35px;
+  outline: none;
+  border: none;
+  background: transparent;
+  margin-right: 5px;
+}
+
+#container #contact_card form input[type=text] {
+  width: 350px;
+  border-bottom: 1px solid gray;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+}
+
+#container #contact_card form ::-webkit-input-placeholder {
+  color: white;
+}
+
+#container #contact_card form :-ms-input-placeholder {
+  color: white;
+}
+
+#container #contact_card form ::-ms-input-placeholder {
+  color: white;
+}
+
+#container #contact_card form ::placeholder {
+  color: white;
+}
+
+#container #contact_card form button {
+  width: auto;
+  background-color: #D3B178;
+  padding: 0 13px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
 #container .social_links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,11 +150,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: absolute;
-  bottom: 1%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
 }
 
 #container .social_links .social_box {
@@ -131,72 +187,6 @@ body {
   background-color: blanchedalmond;
 }
 
-#contact_card {
-  position: absolute;
-  bottom: 12%;
-  left: 55%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#contact_card form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 10px;
-}
-
-#contact_card form input, #contact_card form button {
-  height: 35px;
-  outline: none;
-  border: none;
-  background: transparent;
-  margin-right: 5px;
-}
-
-#contact_card form input[type=text] {
-  width: 60%;
-  border-bottom: 1px solid gray;
-  color: white;
-  font-family: 'Muli', sans-serif;
-  font-size: 18px;
-}
-
-#contact_card form ::-webkit-input-placeholder {
-  color: white;
-}
-
-#contact_card form :-ms-input-placeholder {
-  color: white;
-}
-
-#contact_card form ::-ms-input-placeholder {
-  color: white;
-}
-
-#contact_card form ::placeholder {
-  color: white;
-}
-
-#contact_card form button {
-  background-color: #D3B178;
-  padding: 0 13px;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 961px) {
   #container .foreground {
     display: block;
@@ -204,21 +194,19 @@ body {
   #container .emblem {
     width: 350.01px;
     height: 403.99px;
-    position: absolute;
-    top: 30%;
-    left: 56%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
   }
   #container .emblem svg {
     height: inherit;
     width: inherit;
   }
   #container #demo {
-    font-size: 32px;
+    font-size: 52px;
   }
   #container #demo .bar .label {
-    font-size: 12px;
+    font-size: 22px;
+  }
+  #container #contact_card form input[type=text] {
+    width: 250px;
   }
 }
 
@@ -227,13 +215,11 @@ body {
     display: none;
   }
   #container .emblem {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+    place-self: center;
     width: 350.01px;
     height: 403.99px;
-    position: absolute;
-    top: 30%;
-    left: 56%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
   }
   #container .emblem svg {
     height: inherit;
@@ -245,12 +231,7 @@ body {
   #container #demo .bar .label {
     font-size: 12px;
   }
-  #contact_card {
-    width: 100%;
-    bottom: 10%;
-    left: 50%;
-  }
-  #contact_card form {
+  #container #contact_card form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -258,39 +239,11 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
-    padding: 10px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-  #contact_card form input[type=text] {
+  #container #contact_card form input[type=text] {
     text-align: center;
-    width: 80%;
+    width: 350px;
     margin-bottom: 10px;
-  }
-  #contact_card form ::-webkit-input-placeholder {
-    color: white;
-  }
-  #contact_card form :-ms-input-placeholder {
-    color: white;
-  }
-  #contact_card form ::-ms-input-placeholder {
-    color: white;
-  }
-  #contact_card form ::placeholder {
-    color: white;
-  }
-  #contact_card form button {
-    background-color: #D3B178;
-    padding: 0 13px;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-    width: 50%;
   }
 }
 /*# sourceMappingURL=homepage.css.map */
