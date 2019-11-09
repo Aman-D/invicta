@@ -19,17 +19,17 @@ app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
 //connecting to database
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: " ",
-    database: 'aman'
-  });
+// var con = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: " ",
+//     database: 'aman'
+//   });
   
-  con.connect((err)=>{
-      if(err) throw err;
-      console.log("database connected");
-  });
+//   con.connect((err)=>{
+//       if(err) throw err;
+//       console.log("database connected");
+//   });
 
 
 
