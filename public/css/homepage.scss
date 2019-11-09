@@ -14,14 +14,14 @@ body{
     background-image: url('../images/Artboard1.png');
     background-size:cover;
     background-repeat: no-repeat;
-    transition: all 0.85s ease-in-out;
+    // transition: all 0.85s ease-in-out;
     // filter: blur(8px);
     .foreground{
         position: absolute;
         top:0;
         left:0;
-        height:100%;
-        width:100%;
+        height:inherit;
+        width:inherit;
         background-image: url('../images/foreground2.png');
         background-size:cover;
         background-repeat: no-repeat;
@@ -70,6 +70,7 @@ body{
         bottom:1%;
         left:50%;
         transform:translate(-50%,-50%) ;
+
         .social_box{
             background-color: #D3B178;
             border-radius: 50%;
@@ -155,3 +156,104 @@ body{
         } 
     }
 }
+
+
+
+
+//for tablets
+@media only screen and (max-width: 961px){
+    #container{
+        .foreground{
+            display: block;
+        }
+ 
+ 
+        .emblem{
+         width:350.01px;
+         height:403.99px;
+         position: absolute;
+         top:30%;
+         left:56%;
+         transform:translate(-50%,-50%) ;
+         svg{
+             height:inherit;
+             width:inherit;
+         }
+     }
+ 
+ 
+     #demo{
+         font-size: 32px;
+ 
+         .bar{
+             .label{
+                 font-size: 12px;
+             }
+         }
+     }
+    }
+}
+//for mobile
+@media only screen and (max-width: 600px) {
+    #container{
+        .foreground{
+            display: none;
+        }
+ 
+ 
+        .emblem{
+         width:350.01px;
+         height:403.99px;
+         position: absolute;
+         top:30%;
+         left:56%;
+         transform:translate(-50%,-50%) ;
+         svg{
+             height:inherit;
+             width:inherit;
+         }
+     }
+ 
+ 
+     #demo{
+         font-size: 32px;
+ 
+         .bar{
+             .label{
+                 font-size: 12px;
+             }
+         }
+     }
+    }
+    #contact_card{
+     width:100%;
+    bottom:10%;
+     left:50%;
+     form{
+         display: flex;
+         flex-direction: column;
+         width: 80%;
+         padding:10px;
+         justify-content:center;
+         align-items:center;
+ 
+         input[type = text]{
+             text-align: center;
+             width:80%;
+             margin-bottom:10px;
+         } 
+         ::placeholder{
+             color:white;
+         } 
+         button{
+             background-color: #D3B178;
+             padding: 0 13px;
+             font-size: 18px;
+             color:white;
+             cursor: pointer;
+             width:50%;
+         } 
+     }
+ }
+ 
+ }

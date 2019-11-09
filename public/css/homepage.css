@@ -16,16 +16,14 @@ body {
   background-image: url("../images/Artboard1.png");
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-transition: all 0.85s ease-in-out;
-  transition: all 0.85s ease-in-out;
 }
 
 #container .foreground {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: inherit;
+  width: inherit;
   background-image: url("../images/foreground2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -197,5 +195,102 @@ body {
   font-size: 18px;
   color: white;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 961px) {
+  #container .foreground {
+    display: block;
+  }
+  #container .emblem {
+    width: 350.01px;
+    height: 403.99px;
+    position: absolute;
+    top: 30%;
+    left: 56%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #container .emblem svg {
+    height: inherit;
+    width: inherit;
+  }
+  #container #demo {
+    font-size: 32px;
+  }
+  #container #demo .bar .label {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #container .foreground {
+    display: none;
+  }
+  #container .emblem {
+    width: 350.01px;
+    height: 403.99px;
+    position: absolute;
+    top: 30%;
+    left: 56%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #container .emblem svg {
+    height: inherit;
+    width: inherit;
+  }
+  #container #demo {
+    font-size: 32px;
+  }
+  #container #demo .bar .label {
+    font-size: 12px;
+  }
+  #contact_card {
+    width: 100%;
+    bottom: 10%;
+    left: 50%;
+  }
+  #contact_card form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    padding: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #contact_card form input[type=text] {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  #contact_card form ::-webkit-input-placeholder {
+    color: white;
+  }
+  #contact_card form :-ms-input-placeholder {
+    color: white;
+  }
+  #contact_card form ::-ms-input-placeholder {
+    color: white;
+  }
+  #contact_card form ::placeholder {
+    color: white;
+  }
+  #contact_card form button {
+    background-color: #D3B178;
+    padding: 0 13px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=homepage.css.map */
