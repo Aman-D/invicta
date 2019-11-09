@@ -186,6 +186,8 @@ body {
 
 #container .social_links .social_box:hover {
   background-color: blanchedalmond;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media only screen and (max-width: 961px) {

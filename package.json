@@ -4,7 +4,7 @@
   "description": "techno cultural fest",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",

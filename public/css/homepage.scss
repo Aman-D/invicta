@@ -45,6 +45,7 @@ body{
         svg{
             height:inherit;
             width:inherit;
+           
         }
     }
 
@@ -145,6 +146,7 @@ body{
             }
             &:hover{
                 background-color: blanchedalmond;
+                transform: scale(1.2);
             }
         }
         
