@@ -173,7 +173,7 @@ body{
  
      #demo{
          font-size: 52px;
- 
+        margin:0 auto;
          .bar{
              .label{
                  font-size: 22px;
@@ -219,10 +219,12 @@ body{
  
      #demo{
          font-size: 32px;
- 
+         margin:0 auto;
          .bar{
+            margin:5px;
              .label{
                  font-size: 12px;
+                
              }
          }
      }
@@ -234,7 +236,7 @@ body{
             flex-direction: column;
             input[type = text]{
                 text-align: center;
-                width:350px;
+                max-width:350px;
                 margin-bottom:10px;
             } 
         }
@@ -243,3 +245,18 @@ body{
     }
   
  }
+
+
+//  @media only screen and (max-width: 600px){
+//      #conatiner{
+//         #demo{
+//             font-size: 28px;
+//             margin:0 auto;
+//             .bar{
+//                 .label{
+//                     font-size: 10px;
+//                 }
+//             }
+//         }
+//      }
+//  }

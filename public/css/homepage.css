@@ -202,6 +202,7 @@ body {
   }
   #container #demo {
     font-size: 52px;
+    margin: 0 auto;
   }
   #container #demo .bar .label {
     font-size: 22px;
@@ -231,6 +232,10 @@ body {
   }
   #container #demo {
     font-size: 32px;
+    margin: 0 auto;
+  }
+  #container #demo .bar {
+    margin: 5px;
   }
   #container #demo .bar .label {
     font-size: 12px;
@@ -246,7 +251,7 @@ body {
   }
   #container #contact_card form input[type=text] {
     text-align: center;
-    width: 350px;
+    max-width: 350px;
     margin-bottom: 10px;
   }
 }
