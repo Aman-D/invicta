@@ -192,9 +192,14 @@ body{
         }
     }
 }
+
+
 //for mobile
 @media only screen and (max-width: 600px) {
     #container{
+        width: 100vw;
+        overflow: hidden;
+        
         .foreground{
             display: none;
         }
@@ -202,7 +207,7 @@ body{
  
         .emblem{
             transform:translateX(20px);
-            place-self: center;
+           
          width:350.01px;
          height:403.99px;
          svg{
