@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <% include ./include/header %>
+            <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="/css/admin.css">
+    </head>
+<body>
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>College</th>
+                <th>Year</th>
+                <th>Programme</th>
+                <th>Phone</th>
+                <th>Refral</th>
+                <th>Points</th>
+            </tr>
+                <% for(var i=0; i < user.length; i++) { %>
+                   <tr>
+                    <td><%= user[i].firstname %></td>
+                    <td><%= user[i].lastname %></td>
+                    <td><%= user[i].email %></td>
+                    <td><%= user[i].password %></td>
+                    <td><%= user[i].college %></td>
+                    <td><%= user[i].year %></td>
+                    <td><%= user[i].programme %></td>
+                    <td><%= user[i].phone %></td>
+                    <td><%= user[i].refral %></td>
+                    <td><%= user[i].points %></td>
+                   </tr>
+                <% } %>
+                </table>
+</body>
+   
+</html>

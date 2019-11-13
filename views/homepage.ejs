@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <% include ./include/header %>
     <link rel="stylesheet" href="/css/homepage.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title><%= title %></title>
 </head>
 <body>
     <div id="container">
@@ -2954,8 +2948,8 @@
             </div>
         </div>
         <div id="contact_card">
-            <form action="/" method="POST" id="form">
-                <input type="text" id="email" name="email" placeholder="Email" />
+            <form action="/"  method="POST" id="form">
+                <input type="email" id="email" name="email" placeholder="IamReadyFor@invicta20.com" />
                 <button type="submit" id="submit">Get Notified</button>
             </form>
         </div>
@@ -2973,8 +2967,8 @@
                     <a href="#"><i class="fab fa fa-linkedin"></i></i></a>
             </div>      
         </div>
-    </div>   
-    
+    </div>
+    <div id="about"></div>   
 </body>
 <script src="/js/countdown.js"></script>
 <script src="/js/blur.js"></script>

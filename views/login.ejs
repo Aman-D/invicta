@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <% include ./include/header %>
+    </head>
+<body>
+    <form action="/ca/login" method="post">
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" required>
+        <button type="submit" id="submit">Get Notified</button>
+        <% if(msg) %>
+        <div><%= msg %></div>
+    </form>
+    <p>New to our page? <a href="./register">Register</a>Here</p>
+</body>
+   
+</html>

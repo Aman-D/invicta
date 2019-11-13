@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <% include ./include/header %>
+    </head>
+<body>
+    <form action="/ca/register" method="post">
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" required>
+
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+
+        <label for="college">College</label>
+        <input type="text" name="college" required>
+
+        <label for="year">Year</label>
+        <input type="radio" name="year" value="1" checked>First Year
+        <input type="radio" name="year" value="2"> Second Year
+        <input type="radio" name="year" value="3"> Third year
+        <input type="radio" name="year" value="4"> Final year
+
+        <label for="programme">Programme</label>
+        <input type="text" name="programme" required>
+        
+        <label for="phone">Phone</label>
+        <input type="number" name="phone" required>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" required>
+
+        <label for="refral">Refral Code</label>
+        <input type="text" name="refral">
+
+        <button type="submit" id="submit">Get Notified</button>
+        <% if(msg) %>
+        <div><%= msg %></div>
+
+    </form>
+    <p>Already registered with us? <a href="./login">Login Here</a>Here</p>
+</body>
+   
+</html>

@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F1F2EB;
+  font-family: 'Muli', sans-serif;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 90px;
+  place-items: center;
+  -webkit-box-shadow: 0 0 20px rgba(77, 77, 77, 0.74);
+          box-shadow: 0 0 20px rgba(77, 77, 77, 0.74);
+  background-color: #fafafa;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+header div li {
+  list-style: none;
+  padding: 20px;
+}
+
+header div li a {
+  text-decoration: none;
+  color: #5e5e5d;
+}
+
+section {
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .heading {
+  padding: 20px 0;
+}
+
+section .heading h1 {
+  font-size: 42px;
+  color: rgba(0, 0, 0, 0.514);
+}
+
+section .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .blocks a {
+  text-decoration: none;
+}
+
+section .blocks a .block {
+  background-color: #eeeeea;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 10px 1px rgba(117, 117, 117, 0.603);
+          box-shadow: 0 0 10px 1px rgba(117, 117, 117, 0.603);
+  color: #7cdf20;
+}
+/*# sourceMappingURL=admin.css.map */

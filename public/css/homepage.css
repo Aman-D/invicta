@@ -4,7 +4,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   font-family: 'Noto Sans KR', sans-serif;
   height: 100vh;
@@ -34,8 +34,9 @@ body {
   background-image: url("../images/foreground2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-attachment: fixed;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rnogba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rnogba(0, 0, 0, 0.19);
   pointer-events: none;
 }
 
@@ -110,28 +111,28 @@ body {
   margin-right: 5px;
 }
 
-#container #contact_card form input[type=text] {
+#container #contact_card form input[type=email] {
   width: 350px;
   border-bottom: 1px solid gray;
-  color: white;
+  color: rgba(255, 255, 255, 0.473);
   font-family: 'Muli', sans-serif;
   font-size: 18px;
 }
 
 #container #contact_card form ::-webkit-input-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.397);
 }
 
 #container #contact_card form :-ms-input-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.397);
 }
 
 #container #contact_card form ::-ms-input-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.397);
 }
 
 #container #contact_card form ::placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.397);
 }
 
 #container #contact_card form button {
@@ -190,6 +191,18 @@ body {
           transform: scale(1.2);
 }
 
+#about {
+  height: 100vh;
+  background-color: #141616;
+}
+
+footer {
+  height: 250px;
+  background-color: #141616;
+  z-index: -1;
+  background-blend-mode: overlay;
+}
+
 @media only screen and (max-width: 961px) {
   #container .foreground {
     display: block;
@@ -209,7 +222,7 @@ body {
   #container #demo .bar .label {
     font-size: 22px;
   }
-  #container #contact_card form input[type=text] {
+  #container #contact_card form input[type=email] {
     width: 250px;
   }
 }
@@ -251,7 +264,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #container #contact_card form input[type=text] {
+  #container #contact_card form input[type=email] {
     text-align: center;
     max-width: 350px;
     margin-bottom: 10px;
