@@ -4,8 +4,8 @@
 }
 
 body {
-  background-color: #F1F2EB;
-  font-family: 'Muli', sans-serif;
+  background-color: #f1f2eb;
+  font-family: "Muli", sans-serif;
 }
 
 header {
@@ -45,7 +45,7 @@ header div li a {
 }
 
 section {
-  padding: 100px;
+  padding: 30px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,10 +68,13 @@ section .blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 section .blocks a {
   text-decoration: none;
+  margin-right: 30px;
 }
 
 section .blocks a .block {

@@ -1,61 +1,63 @@
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: #F1F2EB;
-    font-family: 'Muli', sans-serif;
-}
-
-header{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height:90px;
-    place-items:center;
-    box-shadow: 0 0 20px rgba(77, 77, 77, 0.74);
-    background-color: rgb(250, 250, 250);
-   
-    div{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        li{
-            list-style: none;
-            padding:20px;
-            
-            a{
-                text-decoration: none;
-                color: rgb(94, 94, 93);
-            }
-        }
-    }
+body {
+  background-color: #f1f2eb;
+  font-family: "Muli", sans-serif;
 }
 
-section{
-    padding:100px;
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90px;
+  place-items: center;
+  box-shadow: 0 0 20px rgba(77, 77, 77, 0.74);
+  background-color: rgb(250, 250, 250);
+
+  div {
     display: flex;
-    flex-direction: column;
-    .heading{
-        padding:20px 0;
-        h1{
-            font-size: 42px;
-            color: rgba(0, 0, 0, 0.514);
-        }
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    li {
+      list-style: none;
+      padding: 20px;
+
+      a {
+        text-decoration: none;
+        color: rgb(94, 94, 93);
+      }
     }
-    .blocks{
-        display: flex;
-        a{
-            text-decoration: none;
-            .block{
-                background-color: rgb(238, 238, 234);
-                display: grid;
-                place-items: center;
-                padding:10px;
-                box-shadow: 0 0 10px 1px rgba(117, 117, 117, 0.603);
-                color: rgb(124, 223, 32);
-               
-            }
-        }
+  }
+}
+
+section {
+  padding: 30px 100px;
+  display: flex;
+  flex-direction: column;
+  .heading {
+    padding: 20px 0;
+    h1 {
+      font-size: 42px;
+      color: rgba(0, 0, 0, 0.514);
     }
+  }
+  .blocks {
+    display: flex;
+    flex-wrap: nowrap;
+
+    a {
+      text-decoration: none;
+      .block {
+        background-color: rgb(238, 238, 234);
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        box-shadow: 0 0 10px 1px rgba(117, 117, 117, 0.603);
+        color: rgb(124, 223, 32);
+      }
+      margin-right: 30px;
+    }
+  }
 }

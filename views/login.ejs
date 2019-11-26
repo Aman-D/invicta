@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-            <% include ./include/header %>
-    </head>
-<body>
-    <form action="/ca/login" method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" required>
-        <button type="submit" id="submit">Get Notified</button>
-        <% if(msg) %>
-        <div><%= msg %></div>
-    </form>
-    <p>New to our page? <a href="./register">Register</a>Here</p>
-</body>
-   
+  <head>
+    <% include ./include/header %>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div class="form">
+      <form action="/login" method="post">
+        <div id="email" class="block">
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div id="password" class="block">
+          <label for="password">Password</label>
+          <input type="password" name="password" required />
+        </div>
+        <button type="submit" id="submit">Login</button>
+      </form>
+      <% if(msg) %>
+      <div id="validation_message"><%= msg %></div>
+      <p>New to our page? <a href="./register">Register</a>Here</p>
+    </div>
+  </body>
+  <script src="/js/validation.js"></script>
 </html>

@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: aqua;
+  padding: 20px;
+}
+
+.form form .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form form .block input {
+  width: 250px;
+  height: 30px;
+}
+
+.form form button {
+  width: 100%;
+  height: 30px;
+}
+
+.form #validation_message {
+  text-align: center;
+  width: 100%;
+  color: red;
+  margin-top: 10px;
+}
+
+.form p {
+  text-align: center;
+  padding: 15px 0;
+}
+/*# sourceMappingURL=login.css.map */
