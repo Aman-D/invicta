@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 30px;
+  font-family: "PT Sans", sans-serif;
+  background-image: url("../images/admin_back1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  form {
+    margin-top: 80px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(88, 88, 88, 0.459);
+    select {
+      width: 100%;
+      margin: 10px 0;
+      font-size: 20px;
+      color: rgb(53, 53, 53);
+    }
+    textarea {
+      width: 100%;
+      font-size: 15px;
+      color: rgb(46, 46, 46);
+    }
+    input {
+      height: 50px;
+      font-size: 20px;
+      color: rgb(46, 46, 46);
+    }
+    button {
+      width: 100%;
+      font-size: 20px;
+      background-color: rgb(80, 202, 69);
+      border: none;
+      outline: none;
+      color: white;
+      padding: 10px 0;
+    }
+  }
+  .form {
+    width: 80%;
+    input {
+      width: 100%;
+    }
+  }
+}

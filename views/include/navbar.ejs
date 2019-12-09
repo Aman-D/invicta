@@ -1,0 +1,21 @@
+<header>
+  <nav>
+    <div id="logo">
+      <a href="/"> <img src="/images/logoq.png" alt="Invicta logo"/></a>
+    </div>
+    <div id="links">
+      <li><a href="/ca_portal" target="_blank">CA PORTAL</a></li>
+      <li><a href="#">ACCOMODATIONS</a></li>
+      <li><a href="/register">REGISTER</a></li>
+      <li><a href="/event">EVENTS</a></li>
+      <li><a href="/sponsor" target="_blank">SPONSORS</a></li>
+      <li><a href="">CONTACT US</a></li>
+      <% if(login === '1'){ %>
+      <a href="/profile"><img src="/images/user.png" alt="profile"/></a>
+      <% }else{ %>
+      <li><a href="/login">LOGIN</a></li>
+      <% }%>
+      <li></li>
+    </div>
+  </nav>
+</header>

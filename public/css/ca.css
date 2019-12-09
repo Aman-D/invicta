@@ -1,0 +1,409 @@
+@font-face {
+  font-family: "cursive";
+  src: url(../fonts/edosz.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normal";
+  src: url(../fonts/HeptaSlabGX.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normallight";
+  src: url(../fonts/HeptaSlab-VF.ttf);
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  margin: 0 100px;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.514);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.514);
+}
+
+.container #banner {
+  position: relative;
+  padding: 0 60px;
+  height: 70vh;
+  widows: 100vw;
+  background-color: aqua;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  background: linear-gradient(135deg, #42e695 0%, #3bb2b8 100%);
+}
+
+.container #banner #banner_content {
+  width: 70%;
+  margin: auto 0;
+}
+
+.container #banner #banner_content h1 {
+  font-size: 2.5rem;
+}
+
+.container #banner #banner_content h3 {
+  font-size: 1.5rem;
+}
+
+.container #banner #banner_content p {
+  color: rgba(255, 255, 255, 0.897);
+  padding: 20px 0;
+  text-align: left;
+  line-height: 1.3;
+  font-size: 1.15rem;
+  font-weight: 300;
+  width: 100%;
+}
+
+.container #banner #svg {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container #banner #svg svg {
+  width: 80%;
+  height: 80%;
+}
+
+.container #banner #btn {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  padding: 20px;
+  background-color: #6c63ff;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.container #banner #btn:hover {
+  bottom: -45px;
+}
+
+.container #banner #btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.container #perks {
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("/images/ca.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container #perks h1 {
+  padding: 30px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.container #perks .cards {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.container #perks .cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
+  width: 250px;
+  padding: 10px;
+  background-color: #42e694ce;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+}
+
+.container #perks .cards .card .back {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/layer2-1.png");
+  background-size: cover;
+  background-color: #5f73bc;
+  -webkit-transform: rotateZ(-10deg);
+          transform: rotateZ(-10deg);
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.377);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.377);
+}
+
+.container #perks .cards .card h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-transform: rotateZ(-10deg);
+          transform: rotateZ(-10deg);
+  font-family: "cursive";
+  color: #ee97a3;
+  letter-spacing: 3px;
+  font-size: 1.9rem;
+}
+
+.container #perks .cards .card li {
+  list-style: none;
+  padding: 5px 0;
+  -webkit-transform: rotateZ(-10deg);
+          transform: rotateZ(-10deg);
+  width: 100%;
+  text-align: center;
+}
+
+.container #duties {
+  background: url("/images/ca1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container #duties h1 {
+  padding: 30px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.container #duties #tabs {
+  background-color: rgba(255, 255, 255, 0.562);
+  margin: 50px 20px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "pub pub . ." ". . idea idea" "pro pro . . " ". . org org" "rep rep . .";
+}
+
+.container #duties #tabs .tab {
+  -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.473);
+          box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.473);
+  width: auto;
+  padding: 30px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.container #duties #tabs .tab h1 {
+  padding: 0;
+  font-size: 1.9rem;
+}
+
+.container #duties #tabs .tab img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.container #duties #tabs #pub {
+  background-color: #f65c5c;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: pub;
+}
+
+.container #duties #tabs #pub h1,
+.container #duties #tabs #pub p {
+  text-align: left;
+}
+
+.container #duties #tabs #pub img {
+  right: -50px;
+  top: 20px;
+}
+
+.container #duties #tabs #idea {
+  background-color: #5f73bc;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: idea;
+}
+
+.container #duties #tabs #idea h1,
+.container #duties #tabs #idea p {
+  text-align: right;
+}
+
+.container #duties #tabs #idea img {
+  left: -60px;
+  top: 20px;
+}
+
+.container #duties #tabs #pro {
+  background-color: #00b899;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: pro;
+}
+
+.container #duties #tabs #pro h1,
+.container #duties #tabs #pro p {
+  text-align: left;
+}
+
+.container #duties #tabs #pro img {
+  right: -50px;
+  top: 20px;
+}
+
+.container #duties #tabs #org {
+  background-color: #d08840;
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: org;
+}
+
+.container #duties #tabs #org h1,
+.container #duties #tabs #org p {
+  text-align: right;
+}
+
+.container #duties #tabs #org img {
+  left: -60px;
+  top: 20px;
+}
+
+.container #duties #tabs #rep {
+  background-color: #a06169;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: rep;
+}
+
+.container #duties #tabs #rep h1,
+.container #duties #tabs #rep p {
+  text-align: left;
+}
+
+.container #duties #tabs #rep img {
+  right: -50px;
+  top: 20px;
+}
+
+.container #faqs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.container #faqs h1 {
+  padding: 30px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.container #faqs .para {
+  margin: 10px 50px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.288);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.288);
+  padding: 30px;
+}
+
+.container #faqs .para h3 {
+  padding: 5px 0;
+}
+
+.container #faqs .para:hover {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.container #contact {
+  height: 40vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  background: linear-gradient(135deg, #42e695 0%, #3bb2b8 100%);
+  place-items: center;
+  background-position: fixed;
+  background-attachment: fixed;
+}
+
+.container #contact .con_card {
+  text-align: center;
+}
+
+.container #contact .con_card h1 {
+  font-family: "cursive";
+  color: white;
+  text-shadow: 0 2px #000;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.container #contact .con_card h3 {
+  font-family: "normalLight";
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.container #contact .con_card img {
+  width: 100px;
+  height: 100px;
+}
+
+.container #copyright {
+  background-color: #1a183d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+/*# sourceMappingURL=ca.css.map */

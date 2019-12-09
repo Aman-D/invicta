@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "cursive";
+  src: url(../fonts/edosz.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normal";
+  src: url(../fonts/HeptaSlabGX.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normallight";
+  src: url(../fonts/HeptaSlab-VF.ttf);
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #01001e;
+  background-image: url("/images/layer2-1.png");
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  font-family: "cursive";
+  color: #00fff6;
+  font-size: 3rem;
+  padding: 50px;
+}
+
+.container {
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(120px, 300px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(120px, 300px));
+  width: 100%;
+  place-content: center;
+  margin: 20px 0;
+}
+
+.container .block .card {
+  height: 220px;
+  max-width: 290px;
+  position: relative;
+  background-color: #18021ec7;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+.container .block .card:hover {
+  background-color: #00fff786;
+}
+
+.container .block .card:hover h5 {
+  color: white;
+}
+
+.container .block .card:hover:before {
+  -webkit-transition: 1s !important;
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 100px;
+  width: 280px;
+  height: 280px;
+  z-index: 2;
+  -webkit-animation: anim 3.2s ease-in-out;
+          animation: anim 3.2s ease-in-out;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.514);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.514);
+}
+
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+    left: 70px;
+  }
+  20% {
+    opacity: 1;
+    left: 100px;
+  }
+  100% {
+    opacity: 1;
+    left: 100px;
+  }
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+    left: 70px;
+  }
+  20% {
+    opacity: 1;
+    left: 100px;
+  }
+  100% {
+    opacity: 1;
+    left: 100px;
+  }
+}
+
+.container .block .card h5 {
+  font-family: "cursive";
+  margin: 48px 0 2px 4px;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #00fff6;
+}
+
+.container .block .card h5::before {
+  position: absolute;
+  content: "";
+  top: 53px;
+  left: -4px;
+  width: 6px;
+  height: 26px;
+  display: block;
+  background: #00fff6;
+  opacity: 0.5;
+}
+
+.container .block .card p {
+  font-family: "normalLight";
+  margin-left: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 70px !important;
+}
+
+.container .block .card a {
+  font-family: "normal";
+  margin-left: 4px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.container .block .card a:hover {
+  text-decoration: none !important;
+}
+
+.container .block .card3:hover::before {
+  background: url("/images/team/kritika.jpg");
+  background-size: cover;
+}
+
+.container .block .card4:hover::before {
+  background: url("/images/team/saurav.jpeg");
+  background-size: cover;
+}
+
+.container .block .card12:hover::before {
+  background: url("/images/team/aman.jpeg");
+  background-size: cover;
+}
+
+.container .block .card14:hover::before {
+  background: url("/images/team/ankit1.jpeg");
+  background-size: cover;
+}
+
+.container .block .card15:hover::before {
+  background: url("/images/team/Manoj.jpg");
+  background-size: cover;
+}
+/*# sourceMappingURL=team.css.map */

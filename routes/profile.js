@@ -19,7 +19,8 @@ router.get("/", verify, async (req, res) => {
             console.log(result[0][0].email);
             res.render("profile", {
               title: "Profile",
-              user: result[0][0]
+              user: result[0][0],
+              login: "1"
             });
           })
           .catch(err => console.log(err));

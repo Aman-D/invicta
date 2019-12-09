@@ -11,7 +11,7 @@ const login = require("./routes/login");
 const logout = require("./routes/logout");
 const profile = require("./routes/profile");
 const admin = require("./routes/admin");
-
+const event_land = require("./routes/event_land");
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
@@ -23,6 +23,7 @@ app.use("/register", register);
 app.use("/login", login);
 app.use("/logout", logout);
 app.use("/profile", profile);
+app.use("/event_land", event_land);
 app.use("/admin", admin);
 app.use("/", root);
 

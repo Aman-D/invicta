@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "cursive";
+  src: url(../fonts/edosz.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "normal";
+  src: url(../fonts/HeptaSlabGX.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normallight";
+  src: url(../fonts/HeptaSlab-VF.ttf);
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+body {
+  background-color: #01001e;
+  position: relative;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  pointer-events: none;
+  .layer {
+    object-fit: fill;
+    pointer-events: none;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.container {
+  padding: 180px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  background: #01001e;
+  h1 {
+    font-size: 5rem;
+    color: #00fff6;
+    font-family: "cursive";
+    text-align: center;
+    padding: 30px;
+  }
+  .events {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background: 18021e;
+    h3 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+    .event {
+      img {
+        width: 220px;
+        height: 240px;
+        margin: 0 30px;
+      }
+      h3 {
+        font-size: 1.2rem;
+        font-family: "normalLight";
+      }
+    }
+  }
+}

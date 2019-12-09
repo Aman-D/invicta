@@ -119,7 +119,11 @@ async function insert_user(conn, body) {
 }
 
 router.get("/", (req, res) => {
-  res.render("register", { title: "Register", msg: "" });
+  if (req.cookies.AccessToken) {
+    res.render("register", { title: "Register", msg: "", login: "1" });
+  } else {
+    res.render("register", { title: "Register", msg: "", login: "0" });
+  }
 });
 
 router.post(
@@ -128,14 +132,19 @@ router.post(
   [
     check("email").isEmail(),
     check("password").isLength({ min: 6 }),
-    check("phone").isLength({ min: 10 })
+    check("phone").isLength({ min: 10, max: 10 })
   ],
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      res.status(422).render("register", {
+      let msg;
+      if (errors.errors[0].param == "phone") msg = "Enter correct phone number";
+      if (errors.errors[0].param == "password") msg = "password too short";
+      if (errors.errors[0].param == "email") msg = "Enter correct email";
+      return res.status(422).render("register", {
         title: "Register",
-        msg: "Enter correct detials"
+        msg: msg,
+        login: "0"
       });
     }
 
@@ -160,7 +169,8 @@ router.post(
             conn.release();
             return res.render("register", {
               title: "Register",
-              msg: "This Email is already registered with us"
+              msg: "This Email is already registered with us",
+              login: "0"
             });
           } else {
             if (refral) {
@@ -169,7 +179,8 @@ router.post(
                   if (result === "NoEmail") {
                     return res.render("register", {
                       title: "Register",
-                      msg: "Refral is not valid"
+                      msg: "Refral is not valid",
+                      login: "0"
                     });
                   } else {
                     console.log("Points updated for " + result);

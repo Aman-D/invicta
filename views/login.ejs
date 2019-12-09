@@ -2,10 +2,28 @@
 <html lang="en">
   <head>
     <% include ./include/header %>
-    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/register.css" />
   </head>
   <body>
-    <div class="form">
+    <% include ./include/navbar %>
+    <div id="scene">
+      <div data-depth="0.09" class="layer">
+        <img src="/images/layer1.png" alt="" />
+      </div>
+      <div data-depth="0.3" class="layer">
+        <img src="/images/layer2-1.png" alt="" />
+      </div>
+      <div data-depth="0.4" class="layer">
+        <img src="/images/layer3.png" alt="" />
+      </div>
+      <!-- <div data-depth="0.6" class="layer">
+                  <img src="/images/layer4.png" alt="" />
+                </div> -->
+    </div>
+    <div id="form" class="login">
+      <% if(msg) %>
+      <div id="validation_message"><%= msg %></div>
       <form action="/login" method="post">
         <div id="email" class="block">
           <label for="email">Email</label>
@@ -17,10 +35,16 @@
         </div>
         <button type="submit" id="submit">Login</button>
       </form>
-      <% if(msg) %>
-      <div id="validation_message"><%= msg %></div>
-      <p>New to our page? <a href="./register">Register</a>Here</p>
+
+      <p>New to our page? <a href="./register">Register Here</a></p>
     </div>
   </body>
   <script src="/js/validation.js"></script>
+  <script src="/js/parallax.min.js"></script>
+  <script>
+    var scene = document.getElementById("scene");
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: true
+    });
+  </script>
 </html>

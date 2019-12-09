@@ -1,3 +1,142 @@
-body{
-    background-color: bisque;
+@font-face {
+  font-family: "cursive";
+  src: url(../fonts/edosz.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "normal";
+  src: url(../fonts/HeptaSlabGX.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normallight";
+  src: url(../fonts/HeptaSlab-VF.ttf);
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #01001e;
+  position: relative;
+  height: 120vh;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  pointer-events: none;
+  .layer {
+    object-fit: fill;
+    pointer-events: none;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#form {
+  z-index: 15;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  #validation_message {
+    transform: translateY(-20px);
+  }
+  form {
+    background-color: #01001ed0;
+    box-shadow: 0 0 15px 0 #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    padding: 30px;
+    color: white;
+    font-family: "normal";
+    .block {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin: 6px 0;
+      label {
+        font-family: "cursive";
+        font-size: 1.3rem;
+        color: white;
+      }
+      input {
+        height: 25px;
+        padding: 5px;
+        border: none;
+        outline: none;
+        font-family: "normalLight";
+        &::selection {
+          background-color: #01001e;
+        }
+      }
+      .radio {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        div {
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+          p {
+            margin-top: 0;
+            display: inline-block;
+            padding-left: 3px;
+          }
+        }
+      }
+    }
+    button {
+      padding: 10px;
+      font-family: "cursive";
+      font-size: 1.7rem;
+      outline: none;
+      border: none;
+      margin-top: 10px;
+      transition: all 0.6s ease;
+      &:hover {
+        background-color: #00ffff8f;
+        color: white;
+      }
+    }
+  }
+  p {
+    margin-top: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-family: "normalLight";
+    a {
+      text-decoration: none;
+      color: #00ffff;
+    }
+  }
+  #validation_message {
+    text-align: center;
+    color: red;
+    font-size: 1rem;
+    font-family: "normalLight";
+  }
 }

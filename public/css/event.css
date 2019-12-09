@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "cursive";
+  src: url(../fonts/edosz.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normal";
+  src: url(../fonts/HeptaSlabGX.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normallight";
+  src: url(../fonts/HeptaSlab-VF.ttf);
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body {
+  background-color: #01001e;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  height: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  pointer-events: none;
+}
+
+#scene .layer {
+  -o-object-fit: fill;
+     object-fit: fill;
+  pointer-events: none;
+}
+
+#scene .layer img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 180px 50px 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 99;
+  background: #01001e;
+}
+
+.container h1 {
+  font-size: 5rem;
+  color: #00fff6;
+  font-family: "cursive";
+  text-align: center;
+  padding: 30px;
+}
+
+.container .events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+  background: 18021e;
+}
+
+.container .events h3 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.container .events .event img {
+  width: 220px;
+  height: 240px;
+  margin: 0 30px;
+}
+
+.container .events .event h3 {
+  font-size: 1.2rem;
+  font-family: "normalLight";
+}
+/*# sourceMappingURL=event.css.map */

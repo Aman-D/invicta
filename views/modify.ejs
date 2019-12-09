@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./include/header %>
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/modify.css" />
+  </head>
+  <body>
+    <div class="container">
+      <% if (msg === "no") { %>
+      <form action="/admin/modify" method="post">
+        <div>
+          <label for="event">Select the event</label><br />
+          <select name="event">
+            <option value="1">JAM</option>
+            <option value="2">Crisis Committee</option>
+            <option value="3">General Quiz</option>
+            <option value="4">Carnival of detectives</option>
+          </select>
+        </div>
+        <button type="submit" id="submit">GO</button>
+      </form>
+      <%}else{%>
+      <form class="form" action="/admin/modify/confirm" method="post">
+        <div>
+          <label for="event_id">Event id</label><br />
+          <input type="text" name="event_id" readonly value=<%= event.id %>>
+        </div>
+        <div>
+          <label for="event_name">Event Name</label><br />
+          <input type="text" name="event_name" value=<%= event.event_name %>>
+        </div>
+        <div>
+          <label for="event_intro">Event Intro</label><br />
+          <textarea name="event_intro"><%= event.event_intro %></textarea>
+        </div>
+        <div>
+          <label for="event_rules">Event Rules</label><br />
+          <textarea name="event_rules"><%= event.event_rules %></textarea>
+        </div>
+        <div>
+          <label for="prize">Prize Money</label><br />
+          <input type="text" name="prize" value=<%= event.prize %>>
+        </div>
+        <button type="submit" id="submit">Update the database</button>
+      </form>
+      <%}%>
+    </div>
+  </body>
+</html>

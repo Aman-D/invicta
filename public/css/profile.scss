@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "cursive";
+  src: url(../fonts/edosz.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "normal";
+  src: url(../fonts/HeptaSlabGX.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normallight";
+  src: url(../fonts/HeptaSlab-VF.ttf);
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+body {
+  background-color: #01001e;
+  background-image: url("/images/layer2-1.png");
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  margin: 180px 50px 0 50px;
+  display: grid;
+  background-color: #18021e;
+  grid-template-areas:
+    "h h h"
+    "minfo  pinfo p"
+    "e e e";
+  padding: 20px;
+  grid-gap: 20px;
+  #header {
+    grid-area: h;
+    font-family: "cursive";
+    font-size: 3.5rem;
+    color: #00fff6;
+  }
+  #minfo {
+    grid-area: minfo;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-family: "cursive";
+      color: #00fff6;
+      font-size: 3rem;
+      letter-spacing: 1.2px;
+    }
+    h3 {
+      font-size: 1.8rem;
+      margin: 10px 0;
+      font-family: "Ubuntu", sans-serif;
+    }
+    p {
+      font-family: "normalLight";
+      color: rgb(196, 196, 196);
+    }
+    h5 {
+      text-transform: uppercase;
+      font-family: "normalLight";
+      font-size: 2rem;
+    }
+  }
+  #pinfo {
+    grid-area: pinfo;
+    display: flex;
+    flex-direction: column;
+    font-family: "Ubuntu", sans-serif;
+    h2 {
+      font-family: "normalLight";
+      color: #00fff6;
+      margin-bottom: 10px;
+    }
+    h3 {
+      margin: 10px 0;
+    }
+  }
+  #p {
+    max-width: 200px;
+    grid-area: p;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      color: #00fff6;
+      font-size: 5rem;
+      font-family: "Ubuntu", sans-serif;
+    }
+    p {
+      font-family: "normalLight";
+      color: rgb(196, 196, 196);
+    }
+  }
+}

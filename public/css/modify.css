@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 30px;
+  font-family: "PT Sans", sans-serif;
+  background-image: url("../images/admin_back1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container form {
+  margin-top: 80px;
+  background-color: white;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 15px rgba(88, 88, 88, 0.459);
+          box-shadow: 0 0 15px rgba(88, 88, 88, 0.459);
+}
+
+.container form select {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 20px;
+  color: #353535;
+}
+
+.container form textarea {
+  width: 100%;
+  font-size: 15px;
+  color: #2e2e2e;
+}
+
+.container form input {
+  height: 50px;
+  font-size: 20px;
+  color: #2e2e2e;
+}
+
+.container form button {
+  width: 100%;
+  font-size: 20px;
+  background-color: #50ca45;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 0;
+}
+
+.container .form {
+  width: 80%;
+}
+
+.container .form input {
+  width: 100%;
+}
+/*# sourceMappingURL=modify.css.map */

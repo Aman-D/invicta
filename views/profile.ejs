@@ -2,12 +2,43 @@
 <html lang="en">
   <head>
     <% include ./include/header %>
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Welcome <%= user.firstname %><%= user.lastname %></h1>
+    <% include ./include/navbar %>
+    <div class="container">
+      <div id="minfo">
+        <h1><%= user.firstname %> <%= user.lastname %></h1>
+        <h3>UID: <%= user.uuid %></h3>
+        <p>
+          This is your UNIQUE IDENTIFICATION which<BR /> will be asked for any
+          further operations
+        </p>
+        <h3>Refral Code: <%= user.refral %></h3>
+      </div>
+      <div id="pinfo">
+        <h2>Personal Information</h2>
+        <h3>Email: <%= user.email %></h3>
+        <h3>Phone No.: <%= user.phone %></h3>
+        <h3>City: <%= user.city %></h3>
+        <h3>College: <%= user.college %></h3>
+      </div>
+      <div id="p">
+        <h1><%= user.points %></h1>
+        <p>
+          Earn more points by bringing more registrations using your refral code
+        </p>
+      </div>
+    </div>
+    <!-- <h1>Welcome <%= user.firstname %><%= user.lastname %></h1>
     <h1><%= user.uuid %></h1>
     <p>is your special access code</p>
-    <h2>Your current point for Campus Ambassador is <%= user.points %></h2>
+    <h2>Your current point for Campus Ambassador is <%= user.points %></h2>-->
     <a href="./logout">Logout</a>
   </body>
 </html>

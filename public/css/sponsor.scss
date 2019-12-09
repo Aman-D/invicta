@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "cursive";
+  src: url(../fonts/edosz.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "normal";
+  src: url(../fonts/HeptaSlabGX.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normallight";
+  src: url(../fonts/HeptaSlab-VF.ttf);
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+body {
+  background-color: #01001e;
+  background-image: url("/images/layer2-1.png");
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  text-align: center;
+  font-family: "cursive";
+  color: #00fff6;
+  font-size: 3rem;
+  padding: 50px;
+}
+.container {
+  z-index: 100;
+  min-height: 100vh;
+  margin-top: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 180px));
+  grid-gap: 50px;
+  background-color: #01001e4f;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.863);
+  img {
+    display: block;
+    max-width: 150px !important;
+    min-height: 50px;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.884);
+  }
+}

@@ -27,7 +27,11 @@ async function checkUser(conn, email, password) {
 
 //login
 router.get("/", (req, res) => {
-  res.render("login", { title: "Login", msg: "" });
+  if (req.cookies.AccessToken) {
+    res.render("login", { title: "Login", msg: "", login: "1" });
+  } else {
+    res.render("login", { title: "Login", msg: "", login: "0" });
+  }
 });
 
 router.post("/", urlencodedParser, async (req, res) => {
@@ -37,10 +41,19 @@ router.post("/", urlencodedParser, async (req, res) => {
     await checkUser(conn, email, password)
       .then(result => {
         if (result.length === 0) {
-          res.render("login", {
-            title: "loign",
-            msg: "Either email or password is incorrect"
-          });
+          if (req.cookies.AccessToken) {
+            res.render("login", {
+              title: "Login",
+              msg: "Either Email or password is wrong",
+              login: "1"
+            });
+          } else {
+            res.render("login", {
+              title: "Login",
+              msg: "Either Email or password is wrong",
+              login: "0"
+            });
+          }
         } else if (result.length > 0) {
           user = result[0];
           let token = jwt.sign({ user: user.email }, "invicta");

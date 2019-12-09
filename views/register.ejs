@@ -2,64 +2,90 @@
 <html lang="en">
   <head>
     <% include ./include/header %>
+    <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/register.css" />
   </head>
   <body>
-    <div class="form" name="register">
-      <form action="/register" method="post" onsubmit="return validate()">
+    <% include ./include/navbar %>
+    <div id="scene">
+      <div data-depth="0.09" class="layer">
+        <img src="/images/layer1.png" alt="" />
+      </div>
+      <div data-depth="0.3" class="layer">
+        <img src="/images/layer2-1.png" alt="" />
+      </div>
+      <div data-depth="0.4" class="layer">
+        <img src="/images/layer3.png" alt="" />
+      </div>
+      <!-- <div data-depth="0.6" class="layer">
+                <img src="/images/layer4.png" alt="" />
+              </div> -->
+    </div>
+    <div id="form" name="register">
+      <% if(msg) %>
+      <div id="validation_message"><%= msg %></div>
+      <form id="register_form">
         <div class="block">
           <label for="firstname">Firstname</label>
           <input type="text" id="firstname" name="firstname" required />
-          <div id="validate_firstname"></div>
         </div>
 
         <div class="block">
           <label for="lastname">Lastname</label>
           <input type="text" id="lastname" name="lastname" required />
-          <div id="validate_lastname"></div>
         </div>
 
         <div class="block">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
-          <div id="validate_email"></div>
         </div>
 
         <div class="block">
           <label for="college">College</label>
           <input type="text" id="college" name="college" required />
-          <div id="validate_college"></div>
         </div>
 
         <div class="block">
           <label for="gender">gender</label>
-          <input type="radio" name="gender" value="male" checked />Male
-          <input type="radio" name="gender" value="female" />Female
+          <div class="radio">
+            <div>
+              <input type="radio" name="gender" value="male" checked />
+              <p>Male</p>
+            </div>
+            <div>
+              <input type="radio" name="gender" value="female" />
+              <p>Female</p>
+            </div>
+          </div>
         </div>
 
         <div class="block">
           <label for="position">What are you registering for</label>
-          <input type="radio" name="position" value="1" checked />Campus
-          Ambassador <input type="radio" name="position" value="0" />Participant
-          <p>You can Participate in events after becoming a CA also</p>
+          <div class="radio">
+            <div>
+              <input type="radio" name="position" value="1" checked />
+              <p>Campus Ambassador</p>
+            </div>
+            <div>
+              <input type="radio" name="position" value="0" />
+              <p>Participant</p>
+            </div>
+          </div>
         </div>
 
         <div class="block">
           <label for="city">city</label>
           <input type="text" id="city" name="city" required />
-          <div id="validate_city"></div>
         </div>
 
         <div class="block">
           <label for="phone">Phone</label>
           <input type="number" id="phone" name="phone" required />
-          <div id="validate_phone"></div>
         </div>
 
         <div class="block">
           <label for="password">Password</label>
           <input type="text" id="password" name="password" required />
-          <div id="validate_password"></div>
         </div>
 
         <div class="block">
@@ -67,12 +93,25 @@
           <input type="text" name="refral" />
         </div>
 
-        <button type="submit" id="submit">Register</button>
+        <button onclick="validate(event)">
+          Register
+        </button>
       </form>
-      <% if(msg) %>
-      <div id="validation_message"><%= msg %></div>
-      <p>Already registered with us? <a href="./login">Login Here</a>Here</p>
+      <p>Already registered with us? <a href="./login">Login Here</a></p>
     </div>
+    <!-- <script>
+      /* Get the documentElement (<html>) to display the page in fullscreen */
+      var elem = document.documentElement;
+      elem.requestFullscreen();
+    </script> -->
+    <script src="/js/validation.js"></script>
   </body>
-  <script src="/js/validation.js"></script>
+  <script src="/js/parallax.min.js"></script>
+
+  <script>
+    var scene = document.getElementById("scene");
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: true
+    });
+  </script>
 </html>
