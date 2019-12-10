@@ -3,14 +3,13 @@ const mysql = require("mysql2");
 
 // Create the connection pool. The pool-specific settings are the defaults
 const pool = mysql.createPool({
-  host: "invicta.cvyu9vbftlk3.ap-south-1.rds.amazonaws.com",
-  user: "Admin",
-  database: "invicta",
-  password: "amandhurwey",
+  host: "localhost",
+  user: "root",
+  database: "aman",
+  password: " ",
   waitForConnections: true,
-  connectionLimit: 20,
-  queueLimit: 0,
-  port: "3306"
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
 //   pool.getConnection((err)=>{

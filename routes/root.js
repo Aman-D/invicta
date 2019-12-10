@@ -86,9 +86,17 @@ router.get("/team", (req, res) => {
 });
 router.get("/event", (req, res) => {
   if (req.cookies.AccessToken) {
-    res.render("event.ejs", { title: "Events", login: "1" });
+    res.render("events.ejs", { title: "Events", login: "1" });
   } else {
     res.render("events.ejs", { title: "Events", login: "0" });
+  }
+});
+
+router.get("/package", (req, res) => {
+  if (req.cookies.AccessToken) {
+    res.render("packages.ejs", { title: "packages", login: "1" });
+  } else {
+    res.render("packages.ejs", { title: "packages", login: "0" });
   }
 });
 

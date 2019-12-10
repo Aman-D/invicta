@@ -10,6 +10,9 @@ for (let i = 0; i < character.length; i++) {
     character[i].style.filter = "grayscale(1)";
     character[i].style.transform = "scale(1)";
   });
+  character[i].addEventListener("click", () => {
+    character[i].style.pointerEvents = "none";
+  });
 }
 
 function show(event) {

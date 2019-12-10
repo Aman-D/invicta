@@ -170,6 +170,16 @@ h1 {
   text-decoration: none !important;
 }
 
+.container .block .card1:hover::before {
+  background: url("/images/team/bhushan.jpg");
+  background-size: cover;
+}
+
+.container .block .card2:hover::before {
+  background: url("/images/team/sadan.jpg");
+  background-size: cover;
+}
+
 .container .block .card3:hover::before {
   background: url("/images/team/kritika.jpg");
   background-size: cover;
@@ -180,8 +190,48 @@ h1 {
   background-size: cover;
 }
 
+.container .block .card5:hover::before {
+  background: url("/images/team/suprabh.jpg");
+  background-size: cover;
+}
+
+.container .block .card6:hover::before {
+  background: url("/images/team/tanzeel.jpg");
+  background-size: cover;
+}
+
+.container .block .card7:hover::before {
+  background: url("/images/team/ambuj.jpg");
+  background-size: cover;
+}
+
+.container .block .card8:hover::before {
+  background: url("/images/team/achyut.jpg");
+  background-size: cover;
+}
+
+.container .block .card9:hover::before {
+  background: url("/images/team/amanat.jpg");
+  background-size: cover;
+}
+
+.container .block .card10:hover::before {
+  background: url("/images/team/arnav.jpg");
+  background-size: cover;
+}
+
+.container .block .card11:hover::before {
+  background: url("/images/team/aromal.jpg");
+  background-size: cover;
+}
+
 .container .block .card12:hover::before {
   background: url("/images/team/aman.jpeg");
+  background-size: cover;
+}
+
+.container .block .card13:hover::before {
+  background: url("/images/team/bhuvan.jpg");
   background-size: cover;
 }
 

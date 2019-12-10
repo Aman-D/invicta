@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "cursive";
+  src: url(../fonts/edosz.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "normal";
+  src: url(../fonts/HeptaSlabGX.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "normallight";
+  src: url(../fonts/HeptaSlab-VF.ttf);
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+body {
+  background-color: #01001e;
+  background-image: url("/images/layer2-1.png");
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  margin: 130px 0;
+  height: 50vh;
+  width: 100%;
+  h1 {
+    color: #00fff6;
+    font-family: "cursive";
+    text-align: center;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .pack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    div {
+      background: #28123e;
+      margin: 0 13px;
+      min-height: 300px;
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      padding: 7px;
+      h1 {
+        color: #00fff6;
+        font-family: "cursive";
+        text-align: center;
+        padding: 5px 0;
+        font-size: 1.5rem;
+      }
+      li {
+        font-family: "normalLight";
+        font-size: 0.7rem;
+        padding: 5px 0;
+      }
+      .sub {
+        padding: 5px 0 0 20px;
+        font-family: "normalLight";
+        list-style: none;
+        font-size: 0.6rem;
+        opacity: 0.8;
+      }
+      .price {
+        justify-self: flex-end;
+        color: #00fff6;
+        font-family: "cursive";
+        text-align: center;
+        padding: 5px 0;
+        font-size: 2rem;
+        letter-spacing: 3px;
+      }
+    }
+  }
+}
