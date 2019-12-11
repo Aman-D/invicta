@@ -1,3 +1,8 @@
+function preloader() {
+  var preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+}
+
 // character hover effects
 const character = document.getElementsByClassName("character");
 

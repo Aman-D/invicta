@@ -27,7 +27,22 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-
+.pre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+  background-color: #01001e;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  img {
+    display: block;
+    height: 250px;
+  }
+}
 #popup_full {
   position: absolute;
   top: 0;

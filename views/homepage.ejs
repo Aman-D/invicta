@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="/css/homepage.css" type="text/css" />
     <link rel="stylesheet" href="/css/modal.css" type="text/css" />
     <link rel="stylesheet" href="/css/swiper.min.css" />
+    <script src="//code.jquery.com/jquery-3.2.0.min.js"></script>
   </head>
-  <body>
+  <body onload="preloader()">
     <% include ./include/navbar %>
+    <div id="preloader" class="pre">
+      <img src="/images/preloader.gif" alt="preloader" />
+    </div>
     <!-- <div id="popup_full">
       <div>
         <p>
@@ -76,24 +80,28 @@
                 <div class="swiper-slide">
                   <h1>Apollo</h1>
                   <p>
-                      Test your knowledge by reaching the farthest depths of cosmos in this quiz which will unveil riveting facts of the starry night.
+                    Test your knowledge by reaching the farthest depths of
+                    cosmos in this quiz which will unveil riveting facts of the
+                    starry night.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1>CHRONOS</h1>
                   <p>
-                      Break the laws of nature and escape the time reaper in this lost explorers journey to untraversed land.
+                    Break the laws of nature and escape the time reaper in this
+                    lost explorers journey to untraversed land.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
-                    <h1>Zenith</h1>
-                    <p>
-                        Converging the huge world of astronomical phenomena, this space exhibition takes you to a ride through space-time.      
-                    </p>
-                    <a href="#">Explore</a>
-                  </div>
+                  <h1>Zenith</h1>
+                  <p>
+                    Converging the huge world of astronomical phenomena, this
+                    space exhibition takes you to a ride through space-time.
+                  </p>
+                  <a href="#">Explore</a>
+                </div>
               </div>
               <h5 onclick="back_slide()">BACK</h5>
             </div>
@@ -102,14 +110,18 @@
                 <div class="swiper-slide">
                   <h1>Online Photography</h1>
                   <p>
-                      An online showcase of theme-based photographs with captions, judged on the basis of response from social media and other photography parameters.
+                    An online showcase of theme-based photographs with captions,
+                    judged on the basis of response from social media and other
+                    photography parameters.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1>offline Photography</h1>
                   <p>
-                      Capture the special moments of invicta’20 and let the live audience of fest decide the chief shutterbug. Get ready to Spot, Snap and Slay!
+                    Capture the special moments of invicta’20 and let the live
+                    audience of fest decide the chief shutterbug. Get ready to
+                    Spot, Snap and Slay!
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -121,14 +133,16 @@
                 <div class="swiper-slide">
                   <h1>Business hackathon</h1>
                   <p>
-                      Conceive a product, create a business plan and pitch your idea in this event to stimulate the entrepreneur within.
+                    Conceive a product, create a business plan and pitch your
+                    idea in this event to stimulate the entrepreneur within.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1>Pitch Perfect</h1>
                   <p>
-                      The flagship start-up funding event aimed at providing once in a lifetime opportunity to budding innovators.
+                    The flagship start-up funding event aimed at providing once
+                    in a lifetime opportunity to budding innovators.
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -140,21 +154,25 @@
                 <div class="swiper-slide">
                   <h1>24 Hour Hackathon</h1>
                   <p>
-                      Create a usable software or hardware in this 24 hr time bound event. Showcase your technical expertise and become the supreme victor.
+                    Create a usable software or hardware in this 24 hr time
+                    bound event. Showcase your technical expertise and become
+                    the supreme victor.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1>Onsite Coding</h1>
                   <p>
-                      Form your cadre and put your programming skills to test by competing against some of the topmost coders out there.
+                    Form your cadre and put your programming skills to test by
+                    competing against some of the topmost coders out there.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1 style="font-size: 1.6rem;">Cryptocracker</h1>
                   <p>
-                      A convivial general aptitude quiz that will ask you, Can you crack those ciphers?
+                    A convivial general aptitude quiz that will ask you, Can you
+                    crack those ciphers?
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -166,21 +184,25 @@
                 <div class="swiper-slide">
                   <h1>LED Matrix</h1>
                   <p>
-                      Form your alliance, create an animation and implement your game on a LED Matrix to explore your electronics & coding skills
+                    Form your alliance, create an animation and implement your
+                    game on a LED Matrix to explore your electronics & coding
+                    skills
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1>Quizzard</h1>
                   <p>
-                      Put your brain circuits to a test and beat the clock by battling against the sharpest of minds.
+                    Put your brain circuits to a test and beat the clock by
+                    battling against the sharpest of minds.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1 style="font-size: 1.6rem;">Technovate</h1>
                   <p>
-                      Have an idea that can leave an Impact? Then imagine, exhibit and innovate to turn visions into reality.
+                    Have an idea that can leave an Impact? Then imagine, exhibit
+                    and innovate to turn visions into reality.
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -192,7 +214,8 @@
                 <div class="swiper-slide">
                   <h1>Automobile Quiz</h1>
                   <p>
-                      Interested in the world of automobiles? Then squeeze those brain muscles and prepare for a battle of wits.
+                    Interested in the world of automobiles? Then squeeze those
+                    brain muscles and prepare for a battle of wits.
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -204,21 +227,24 @@
                 <div class="swiper-slide">
                   <h1>Robowar</h1>
                   <p>
-                      Gear up for an invigorating duel where you will Charge your robots to win the ultimate glory.
+                    Gear up for an invigorating duel where you will Charge your
+                    robots to win the ultimate glory.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1>Robosoccer</h1>
                   <p>
-                      Fuse technology with sports and score big by building a robot to play a fervent game of soccer.
+                    Fuse technology with sports and score big by building a
+                    robot to play a fervent game of soccer.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1 style="font-size: 1.6rem;">Robothon</h1>
                   <p>
-                      Team up to build your robotic marvel, traverse your bot through an obstacle course and become the champion racer.
+                    Team up to build your robotic marvel, traverse your bot
+                    through an obstacle course and become the champion racer.
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -230,7 +256,8 @@
                 <div class="swiper-slide">
                   <h1>Bulls Eye</h1>
                   <p>
-                      Make the best out of waste by turning those plastic bottles into soaring Water Rockets and create a winged spectacle.
+                    Make the best out of waste by turning those plastic bottles
+                    into soaring Water Rockets and create a winged spectacle.
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -238,7 +265,8 @@
                 <div class="swiper-slide">
                   <h1>Eagels View</h1>
                   <p>
-                      An event aimed to help disaster affected areas by bringing out innovations in aerodynamics through RC Gliders.
+                    An event aimed to help disaster affected areas by bringing
+                    out innovations in aerodynamics through RC Gliders.
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -381,23 +409,27 @@
                 <div class="swiper-slide">
                   <h1>Hunkaar</h1>
                   <p>
-                      The art of grabbing the audience’s attention and portraying your thoughts is all that you need. No Lights, No mics, pure ACTION full of energy.
+                    The art of grabbing the audience’s attention and portraying
+                    your thoughts is all that you need. No Lights, No mics, pure
+                    ACTION full of energy.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1>Adakari</h1>
                   <p>
-                      Do you have what it takes to dissolve an audience in an ocean of emotions and actions? The stage is set and waiting for your grand act.
-
+                    Do you have what it takes to dissolve an audience in an
+                    ocean of emotions and actions? The stage is set and waiting
+                    for your grand act.
                   </p>
                   <a href="#">Explore</a>
                 </div>
                 <div class="swiper-slide">
                   <h1 style="font-size: 1.6rem;">Rangmanch</h1>
                   <p>
-                      In civilized Life, a man's total personality is exposed to critical judgment. If you can expose your emotions, here is your chance.
-
+                    In civilized Life, a man's total personality is exposed to
+                    critical judgment. If you can expose your emotions, here is
+                    your chance.
                   </p>
                   <a href="#">Explore</a>
                 </div>
@@ -547,7 +579,6 @@
         </p>
       </footer>
     </div>
-
     <script>
       /* Get the documentElement (<html>) to display the page in fullscreen */
       var elem = document.documentElement;
@@ -605,15 +636,14 @@
       });
     </script>
   </body>
-  <script src="//code.jquery.com/jquery-3.2.0.min.js"></script>
+  <script src="/js/homepage.js"></script>
+  
   <script src="/js/jquery.fullpage.min.js"></script>
   <script>
     $("#fullpage").fullpage();
   </script>
-
-  <script src="/js/parallax.min.js"></script>
   <script src="/js/homepage.js"></script>
-  <script src="/js/modal.js"></script>
+  <script src="/js/parallax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
